@@ -12,7 +12,12 @@
     <button (click)="startAlarm()">Start Alarm</button>
   </li>
   <li>
-    <button (click)="stopAlarm()">Stop Alarm</button>
+    <button (click)="showCodePanel()">Stop Alarm</button>
+  </li>
+  <li *ngIf="codePanelShown">
+    <label>Enter security code</label>
+    <input type="text" [(ngModel)]="code"
+           (keyup.enter)="stopAlarm()">
   </li>
 </ul>
 

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {AlarmService} from "../toolbox/alarm/alarm-service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ToastrModule} from "ngx-toastr";
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import {ToastrModule} from "ngx-toastr";
     ToastrModule.forRoot(), // ToastrModule added
     HttpModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [AlarmService],
   bootstrap: [AppComponent]

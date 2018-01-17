@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AppComponent {
 
   private alarmStarted:boolean = false;
+  private codePanelShown:boolean = false;
 
   constructor(private _alarmService:AlarmService, public toastr: ToastrService) {
   }
@@ -34,6 +35,7 @@ export class AppComponent {
       (res) => {
         this.alarmStarted = false;
         this.showSuccess("Alarm Stopped.");
+        this.codePanelShown = false;
         console.info("Alarm stopped");
       },
       (err) => {
@@ -44,6 +46,9 @@ export class AppComponent {
     //TODO : remove the code from here when the keyboard is made for the touch screen
   }
 
+  showCodePanel(){
+    this.codePanelShown = true;
+  }
 
 
 
